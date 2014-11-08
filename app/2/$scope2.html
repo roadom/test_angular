@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div ng-controller="EventController">
+		Root scope
+		<!-- <tt> 标签呈现类似打字机或者等宽的文本效果 -->
+		<tt>MyEvent</tt>count:{{count}}
+		<ul>
+			<li ng-repeat="i in [1]" ng-controller="EventController">
+				<button ng-click="$emit('MyEvent')">
+					$emit('MyEvent')
+				</button>
+				<button ng-click="$broadcast('MyEvent')">
+					$broadcast('MyEvent')
+				</button>
+				<br>
+				Middle scope
+				<tt>MyEvent</tt>count:{{count}}
+				<ul>
+					<li ng-repeat="item in [1, 2]" ng-controller="EventController">
+						Leaf scope
+						<tt>MyEvent</tt> count:{{count}}
+					</li>
+				</ul>
+			</li>		
+		</ul>
+	</div>
+</body>
+<script src="../js/angular.js"></script>
+<script src="$scope2.js"></script> 
+
+
+</html>
