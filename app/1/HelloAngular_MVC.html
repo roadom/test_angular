@@ -9,6 +9,8 @@
 	<div ng-controller="helloAngular">
 		<!-- {{}}展示层 View -->
 		<p>{{greeting.text}}, Angular</p>
+		<!-- 通过上一中方式，在网络过慢的时候有表达式有可能出现裸露，使用ng-bind将避免这种情况发生 -->
+		<p><span ng-bind="greeting.text"></span>, Angular</p>
 	</div>
 </body>
 
