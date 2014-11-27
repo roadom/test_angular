@@ -7,6 +7,9 @@ myModule.controller('MyCtrl', ['$scope', function($scope){
 myModule.directive("greeting", function() {
     return {
     	restrict:'AE',
+        /*
+        传递一个来自父层scope中的函数
+        */
         scope:{
         	greet:'&'
         },

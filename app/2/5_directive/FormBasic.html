@@ -8,6 +8,7 @@
 		<form name="myForm" ng-submit="save()" ng-controller="TestFormModule">
 			  <input name="userName" type="text" ng-model="user.userName" required/>
 			  <input name="password" type="password" ng-model="user.password" required/>
+			  <!-- ng-disabled 设置校验状态 -->
 			  <input type="submit" ng-disabled="myForm.$invalid"/>
 		</form>
 	</body>

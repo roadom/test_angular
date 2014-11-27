@@ -4,7 +4,10 @@ myModule.controller('MyCtrl', ['$scope', function($scope){
 }])
 myModule.directive("drink", function() {
     return {
-    	restrict:'AE',
+        restrict:'AE',
+        /*
+            使用@绑定，替换了link中的内容
+        */
         scope:{
         	flavor:'@'
         },
